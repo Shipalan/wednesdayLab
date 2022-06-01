@@ -6,7 +6,12 @@
 
 //Code here
 
+let me = {
+  name:'Alan', 
+  age:'26'
+}
 
+// console.log(me)
 
 //////////////////////////// PROBLEM 2 ////////////////////////////
 
@@ -17,6 +22,14 @@
 
 //Code here
 
+let dog = {
+  name:'Shwayze',
+  color: ['orange', 'white'],
+  age: '5',
+  goodGirl: true
+}
+
+// console.log(dog)
 
 
 //////////////////////////// PROBLEM 3 ////////////////////////////
@@ -24,6 +37,7 @@
 
 //Code here
 
+// console.log(dog.name)
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
@@ -31,7 +45,7 @@
 
 //Code here
 
-
+// console.log(dog.color)
 
 //////////////////////////// PROBLEM 5 ////////////////////////////
 /*
@@ -41,12 +55,26 @@
 
 //Code here
 
+let favoriteThings = {
+  band:'linkin park',
+  food:'panda express',
+  person:'myself',
+  book:"galaxy's edge",
+  movie:'i am legend',
+  holiday:'my birthday'
+}
+
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
 //Code here
+
+favoriteThings.car ='mustang'
+favoriteThings.show ='the witcher'
+
+
 
 
 /*
@@ -55,6 +83,10 @@
 */
 
 //Code here
+
+favoriteThings.food = 'chicken nuggets'
+
+// console.log(favoriteThings)
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -74,8 +106,8 @@ var carDetails = {
 
 //Code Here
 
-
-
+let {color, make, model, year} = carDetails
+// console.log(color, make, model, year)
 //////////////////////////// PROBLEM 7 ////////////////////////////
 
 /*
@@ -84,15 +116,25 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
+//////////////////////////////////////////////////////////////////////////////////////Come back/////////////////////////////////////////////////////////////
+
+
+let obj ={
+  title: 'coolest',
+  firstName: 'alan',
+  lastName: 'shipley'
+}
+
+
 function greeting( obj ) {
-  //Code Here
-  
+    //Code Here
+    let {title, firstName, lastName} = obj
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
 }
 
-
+// console.log(greeting(obj))
 
 //////////////////////////// PROBLEM 8 ////////////////////////////
 
@@ -106,7 +148,20 @@ function greeting( obj ) {
 
 //Code Here
 
+const states = {
+  utah: 1,
+  cali: 2,
+  texas: 3,
+  arizona: 4
+}
 
+function totalPopulation(states){
+  let {utah, cali, texas, arizona} = states;
+  return utah + cali + texas + arizona;
+
+}
+
+// console.log(totalPopulation(states))
 
 //////////////////////////// PROBLEM 9 ////////////////////////////
 
@@ -119,7 +174,18 @@ function greeting( obj ) {
 */
 
 //Code Here
+let food = {
+  carb: 'bread',
+  fat: 'butter',
+  protein:'eggs'
+}
 
+function ingredients(food){
+   let {carb, fat, protein} = food
+   return [carb, fat, protein];
+}
+
+// console.log(ingredients(food))
 
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
@@ -142,6 +208,11 @@ var user = {
 
 //Code Here
 
+user.name = ('Bryan G. Smith');
+user.email = ('bryan.smith@devmountain.in');
+
+// console.log(user)
+
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
 /*
@@ -150,17 +221,29 @@ var user = {
 
 //Code Here
 
+delete user.age;
+
+// console.log(user)
 
 //////////////////////////// PROBLEM 12 ////////////////////////////
 /*
-  Create a class called 'Cat'. Make sure to call your constructor, and require these 3 parameters: name, age, color.
-  Outside of your class, create an instance of your cat, passing in whatever values you would like.
-  Print the name of your cat instance using dot notation.
+  Create a class called 'Dog'. Make sure to call your constructor, and require these 3 parameters: name, age, color.
+  Outside of your class, create an instance of your dog, passing in whatever values you would like.
+  Print the name of your dog instance using dot notation.
 */
 
 //Code here
 
+class Dog {
+   constructor(name, age, color){
+     this.name = name,
+     this.age = age,
+     this.color = color
+   }
+}
 
+let Rey = new Dog('Rey', 1.8, 'brown')
+// console.log(Rey)
 
 //////////////////////////// PROBLEM 13 ////////////////////////////
 /*
@@ -171,6 +254,22 @@ var user = {
 */
 
 //Code here
+
+class Wizard {
+  constructor(name, age, favoriteSpell){
+    this.name = name,
+    this.age = age,
+    this.favoriteSpell = favoriteSpell
+  }
+  castSpell(){
+    console.log(this.name + ' has cast ' + this.favoriteSpell + '!')
+  }
+}
+
+let wizard1 = new Wizard('Harry', 18, 'fire')
+
+console.log(wizard1)
+wizard1.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
