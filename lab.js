@@ -268,8 +268,8 @@ class Wizard {
 
 let wizard1 = new Wizard('Harry', 18, 'fire')
 
-console.log(wizard1)
-wizard1.castSpell()
+// console.log(wizard1)
+// wizard1.castSpell()
 
 //////////////////////////// PROBLEM 14 ////////////////////////////
 /*
@@ -296,6 +296,36 @@ wizard1.castSpell()
 
 //Code Here
 
+class Phone {
+  constructor(brand, model, storage, color, price) {
+    this.brand= brand,
+    this.model= model,
+    this.storage= storage,
+    this.color= color,
+    this.price= price,
+    this.soldProperties = false
+       
+  } 
+   
+   sell(){
+     this.soldProperties = true;
+     console.log(`${this.brand} ${this.model} has been sold.`)   
+     }
+    changePrice(newPrice){
+      this.price = newPrice
+    }
+}
+
+
+let phone1 = new Phone('Samsung', 'S22', 258, 'black', 1000)
+
+
+// phone1.sell()
+// phone2.sell()
+
+
+console.log(phone1)
+
   
 /*
     Next make three new phone instances using your class.
@@ -309,6 +339,10 @@ wizard1.castSpell()
 
 //Code Here
 
+let phone2 = new Phone('Apple', '13 pro', 258, 'black', 1000)
+let phone3 = new Phone('Google', 'Pixel', 258, 'black', 750)
+let phone4= new Phone('Nokia', 'nokia', 258, 'black', 150)
+
 /* 
   Call the changePrice function on one of your phones, 
   don't forget to pass in a new price 
@@ -317,6 +351,11 @@ wizard1.castSpell()
 */ 
 
 //Code Here 
+phone1.changePrice(500)
+phone2.changePrice(800)
+
+console.log(phone3)
+console.log(phone2)
 
 
 /*
@@ -326,6 +365,10 @@ wizard1.castSpell()
 */
 
 //Code Here 
+
+phone4.sell()
+
+console.log(phone4)
 
 
 //////////////////////////// PROBLEM 15 ////////////////////////////
@@ -345,6 +388,10 @@ const colors = {
 //do not edit this object
 
 //Code Here 
+
+let copy = {...colors};
+console.log(copy)
+
 
 
 
